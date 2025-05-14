@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 
 const speed = 300.0
+const distBound_x = 4680
+const distBound_y = 2592
+
 var sprite: AnimatedSprite2D
 var cam: Camera2D
 var in_dir
@@ -14,6 +17,7 @@ func get_input():
 	velocity = input_direction * speed
 	
 	var x_dir = input_direction.x
+	var y_dir = input_direction.y
 	
 	#Direction-Facing
 	if(x_dir < 0):

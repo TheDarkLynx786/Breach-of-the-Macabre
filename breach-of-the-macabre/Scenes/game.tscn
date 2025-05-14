@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://3medmk0vtyi5"]
+[gd_scene load_steps=18 format=3 uid="uid://3medmk0vtyi5"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_8dc06"]
 [ext_resource type="Texture2D" uid="uid://bsf2fjcvlkcs" path="res://Assets/Warlock-Cast/pixil-frame-0.png" id="1_lcuid"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://3ib28676m07b" path="res://Assets/Warlock-Move/pixil-frame-3.png" id="9_7esfh"]
 [ext_resource type="Texture2D" uid="uid://cwrbh31850my4" path="res://Assets/Warlock-Move/pixil-frame-4.png" id="10_1p8ne"]
 [ext_resource type="Texture2D" uid="uid://dfijug80dk35s" path="res://Assets/Background.png" id="11_3e6kh"]
+[ext_resource type="Script" path="res://Scripts/cam_tracking.gd" id="12_bvkgj"]
+[ext_resource type="Texture2D" uid="uid://cne643elrus4a" path="res://icon.svg" id="13_8sgo7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d8xmp"]
 animations = [{
@@ -60,10 +62,16 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aiyna"]
 size = Vector2(16, 33)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwuhn"]
+size = Vector2(9360, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5scsg"]
+size = Vector2(30, 5184)
+
 [node name="Game" type="Node2D"]
 
 [node name="Warlock" type="CharacterBody2D" parent="."]
-scale = Vector2(2.5, 2.5)
+scale = Vector2(3, 3)
 script = ExtResource("1_8dc06")
 
 [node name="Sprite Animations" type="AnimatedSprite2D" parent="Warlock"]
@@ -77,19 +85,69 @@ position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_aiyna")
 
 [node name="Following Camera" type="Camera2D" parent="Warlock"]
+drag_left_margin = 1.0
+drag_top_margin = 1.0
+drag_right_margin = 1.0
+drag_bottom_margin = 1.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 show_behind_parent = true
-offset_left = -407.0
-offset_top = -817.0
-offset_right = 9727.0
-offset_bottom = 5585.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5288.0
+offset_top = -3287.0
+offset_right = 5288.0
+offset_bottom = 3287.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(2.70735e-08, 0.10447, 0.0935261, 1)
 
 [node name="Background" type="TextureRect" parent="ColorRect"]
-offset_left = 383.0
-offset_top = 625.0
-offset_right = 9743.0
-offset_bottom = 5809.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4680.0
+offset_top = -2592.0
+offset_right = 4680.0
+offset_bottom = 2592.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("11_3e6kh")
 stretch_mode = 1
+script = ExtResource("12_bvkgj")
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/Background"]
+position = Vector2(8899, 4898)
+texture = ExtResource("13_8sgo7")
+
+[node name="World Boundary" type="Node2D" parent="."]
+
+[node name="Top" type="StaticBody2D" parent="World Boundary"]
+position = Vector2(0, -2607)
+
+[node name="BoundaryY" type="CollisionShape2D" parent="World Boundary/Top"]
+shape = SubResource("RectangleShape2D_uwuhn")
+
+[node name="Bottom" type="StaticBody2D" parent="World Boundary"]
+position = Vector2(0, 2607)
+
+[node name="BoundaryY" type="CollisionShape2D" parent="World Boundary/Bottom"]
+shape = SubResource("RectangleShape2D_uwuhn")
+
+[node name="Left" type="StaticBody2D" parent="World Boundary"]
+position = Vector2(-4695, 0)
+
+[node name="BoundaryX" type="CollisionShape2D" parent="World Boundary/Left"]
+shape = SubResource("RectangleShape2D_5scsg")
+
+[node name="Right" type="StaticBody2D" parent="World Boundary"]
+position = Vector2(4695, 0)
+
+[node name="BoundaryX" type="CollisionShape2D" parent="World Boundary/Right"]
+shape = SubResource("RectangleShape2D_5scsg")
