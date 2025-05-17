@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://3medmk0vtyi5"]
+[gd_scene load_steps=17 format=3 uid="uid://3medmk0vtyi5"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_8dc06"]
 [ext_resource type="Texture2D" uid="uid://bsf2fjcvlkcs" path="res://Assets/Warlock-Cast/pixil-frame-0.png" id="1_lcuid"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://cwrbh31850my4" path="res://Assets/Warlock-Move/pixil-frame-4.png" id="10_1p8ne"]
 [ext_resource type="Texture2D" uid="uid://dfijug80dk35s" path="res://Assets/Background.png" id="11_3e6kh"]
 [ext_resource type="Script" path="res://Scripts/cam_tracking.gd" id="12_bvkgj"]
-[ext_resource type="Texture2D" uid="uid://cne643elrus4a" path="res://icon.svg" id="13_8sgo7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d8xmp"]
 animations = [{
@@ -90,7 +89,7 @@ drag_top_margin = 1.0
 drag_right_margin = 1.0
 drag_bottom_margin = 1.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Env Color" type="ColorRect" parent="."]
 show_behind_parent = true
 anchors_preset = 8
 anchor_left = 0.5
@@ -105,7 +104,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(2.70735e-08, 0.10447, 0.0935261, 1)
 
-[node name="Background" type="TextureRect" parent="ColorRect"]
+[node name="Background" type="TextureRect" parent="Env Color"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -121,10 +120,6 @@ grow_vertical = 2
 texture = ExtResource("11_3e6kh")
 stretch_mode = 1
 script = ExtResource("12_bvkgj")
-
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect/Background"]
-position = Vector2(8899, 4898)
-texture = ExtResource("13_8sgo7")
 
 [node name="World Boundary" type="Node2D" parent="."]
 
@@ -151,3 +146,9 @@ position = Vector2(4695, 0)
 
 [node name="BoundaryX" type="CollisionShape2D" parent="World Boundary/Right"]
 shape = SubResource("RectangleShape2D_5scsg")
+
+[node name="Undead" type="CharacterBody2D" parent="."]
+
+[node name="Sprite Animations" type="AnimatedSprite2D" parent="Undead"]
+
+[node name="Hitbox" type="CollisionShape2D" parent="Undead"]
