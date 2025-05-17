@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://3medmk0vtyi5"]
+[gd_scene load_steps=51 format=3 uid="uid://3medmk0vtyi5"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_8dc06"]
 [ext_resource type="Texture2D" uid="uid://bsf2fjcvlkcs" path="res://Assets/Warlock-Cast/pixil-frame-0.png" id="1_lcuid"]
@@ -12,6 +12,38 @@
 [ext_resource type="Texture2D" uid="uid://cwrbh31850my4" path="res://Assets/Warlock-Move/pixil-frame-4.png" id="10_1p8ne"]
 [ext_resource type="Texture2D" uid="uid://dfijug80dk35s" path="res://Assets/Background.png" id="11_3e6kh"]
 [ext_resource type="Script" path="res://Scripts/cam_tracking.gd" id="12_bvkgj"]
+[ext_resource type="Texture2D" uid="uid://0s1bsberhemu" path="res://Assets/Skeleton Archer/Archer-Idle/idle-1.png" id="13_hdtmk"]
+[ext_resource type="Texture2D" uid="uid://rlvs10d11ltr" path="res://Assets/Skeleton Archer/Archer-Idle/idle-2.png" id="14_1lkbi"]
+[ext_resource type="Texture2D" uid="uid://bckcxlwkn07yq" path="res://Assets/Skeleton Archer/Archer-Idle/idle-3.png" id="15_age7o"]
+[ext_resource type="Texture2D" uid="uid://bsoxlj08t0hrv" path="res://Assets/Skeleton Archer/Archer-Idle/idle-4.png" id="16_05ie2"]
+[ext_resource type="Texture2D" uid="uid://bjnu6hvjuui41" path="res://Assets/Skeleton Archer/Archer-Idle/idle-5.png" id="17_soovm"]
+[ext_resource type="Texture2D" uid="uid://blgpo6gqosbk" path="res://Assets/Skeleton Archer/Archer-Move/move-1.png" id="18_0v5l6"]
+[ext_resource type="Texture2D" uid="uid://dssautaojicit" path="res://Assets/Skeleton Archer/Archer-Move/move-2.png" id="19_4tg3f"]
+[ext_resource type="Texture2D" uid="uid://mkvrqcpcre2t" path="res://Assets/Skeleton Archer/Archer-Move/move-3.png" id="20_c8mq5"]
+[ext_resource type="Texture2D" uid="uid://duekoxia1x4cn" path="res://Assets/Skeleton Knight/Knight-Idle/idle-1.png" id="21_xsbma"]
+[ext_resource type="Texture2D" uid="uid://xvx827fgys4" path="res://Assets/Skeleton Knight/Knight-Idle/idle-2.png" id="22_0rupa"]
+[ext_resource type="Texture2D" uid="uid://y7vli6h6orhl" path="res://Assets/Skeleton Knight/Knight-Idle/idle-3.png" id="23_plsno"]
+[ext_resource type="Texture2D" uid="uid://nfaidd205fuj" path="res://Assets/Skeleton Knight/Knight-Idle/idle-4.png" id="24_krl4s"]
+[ext_resource type="Texture2D" uid="uid://combf3e6hw5ko" path="res://Assets/Skeleton Knight/Knight-Idle/idle-5.png" id="25_4pm3i"]
+[ext_resource type="Texture2D" uid="uid://c4tonkorpk0t4" path="res://Assets/Skeleton Knight/Knight-Move/move-1.png" id="26_uhqfq"]
+[ext_resource type="Texture2D" uid="uid://b5fdn1b66mpq1" path="res://Assets/Skeleton Knight/Knight-Move/move-2.png" id="27_mkjnq"]
+[ext_resource type="Texture2D" uid="uid://dv1uqrbvxbsex" path="res://Assets/Skeleton Knight/Knight-Move/move-3.png" id="28_h8g6x"]
+[ext_resource type="Texture2D" uid="uid://b7ipyhmeqnfgd" path="res://Assets/Skeleton Mage/Mage-Idle/idle-1.png" id="29_wvckb"]
+[ext_resource type="Texture2D" uid="uid://p03g2v0owfq0" path="res://Assets/Skeleton Mage/Mage-Idle/idle-2.png" id="30_o7g6b"]
+[ext_resource type="Texture2D" uid="uid://bio3yyfo6bute" path="res://Assets/Skeleton Mage/Mage-Idle/idle-3.png" id="31_a2qww"]
+[ext_resource type="Texture2D" uid="uid://ckg4l4yg6345o" path="res://Assets/Skeleton Mage/Mage-Idle/idle-4.png" id="32_tpm1m"]
+[ext_resource type="Texture2D" uid="uid://dvupvh5c4o3nf" path="res://Assets/Skeleton Mage/Mage-Idle/idle-5.png" id="33_k5n26"]
+[ext_resource type="Texture2D" uid="uid://cucf17odwcush" path="res://Assets/Skeleton Mage/Mage-Move/move-1.png" id="34_eh3e2"]
+[ext_resource type="Texture2D" uid="uid://dxfgg1t8gvhlo" path="res://Assets/Skeleton Mage/Mage-Move/move-2.png" id="35_w32ml"]
+[ext_resource type="Texture2D" uid="uid://ldgrfw3tmng1" path="res://Assets/Skeleton Mage/Mage-Move/move-3.png" id="36_yjetg"]
+[ext_resource type="Texture2D" uid="uid://begukbtjvq2d8" path="res://Assets/Skeleton Scout/Scout-Idle/idle-2.png" id="37_ywsy6"]
+[ext_resource type="Texture2D" uid="uid://vsltpemqno73" path="res://Assets/Skeleton Scout/Scout-Idle/idle-1.png" id="38_gr58j"]
+[ext_resource type="Texture2D" uid="uid://ct34s0es8d42f" path="res://Assets/Skeleton Scout/Scout-Idle/idle-3.png" id="39_cwlui"]
+[ext_resource type="Texture2D" uid="uid://btddm45td8066" path="res://Assets/Skeleton Scout/Scout-Idle/idle-4.png" id="40_6mfmv"]
+[ext_resource type="Texture2D" uid="uid://cb78k5bw5ihtd" path="res://Assets/Skeleton Scout/Scout-Idle/idle-5.png" id="41_tybfb"]
+[ext_resource type="Texture2D" uid="uid://b1pqhh48sqx6x" path="res://Assets/Skeleton Scout/Scout-Move/move-1.png" id="42_dgdek"]
+[ext_resource type="Texture2D" uid="uid://cr04sm8gcsmp4" path="res://Assets/Skeleton Scout/Scout-Move/move-2.png" id="43_3a36f"]
+[ext_resource type="Texture2D" uid="uid://ct2fridva0vh3" path="res://Assets/Skeleton Scout/Scout-Move/move-3.png" id="44_h220w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d8xmp"]
 animations = [{
@@ -66,6 +98,148 @@ size = Vector2(9360, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5scsg"]
 size = Vector2(30, 5184)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82s7t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_hdtmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1lkbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_age7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_05ie2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_soovm")
+}],
+"loop": true,
+"name": &"Archer-Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_0v5l6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4tg3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_c8mq5")
+}],
+"loop": true,
+"name": &"Archer-Move",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_xsbma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0rupa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_plsno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_krl4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_4pm3i")
+}],
+"loop": true,
+"name": &"Knight-Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_uhqfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_mkjnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_h8g6x")
+}],
+"loop": true,
+"name": &"Knight-Move",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_wvckb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_o7g6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_a2qww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_tpm1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_k5n26")
+}],
+"loop": true,
+"name": &"Mage-Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_eh3e2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_w32ml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_yjetg")
+}],
+"loop": true,
+"name": &"Mage-Move",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_ywsy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_gr58j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_cwlui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_6mfmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_tybfb")
+}],
+"loop": true,
+"name": &"Scout-Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_dgdek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_3a36f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_h220w")
+}],
+"loop": true,
+"name": &"Scout-Move",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h27gp"]
+size = Vector2(45, 100)
 
 [node name="Game" type="Node2D"]
 
@@ -148,7 +322,14 @@ position = Vector2(4695, 0)
 shape = SubResource("RectangleShape2D_5scsg")
 
 [node name="Undead" type="CharacterBody2D" parent="."]
+position = Vector2(112.685, 0)
 
 [node name="Sprite Animations" type="AnimatedSprite2D" parent="Undead"]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_82s7t")
+animation = &"Scout-Move"
+frame_progress = 0.957434
 
 [node name="Hitbox" type="CollisionShape2D" parent="Undead"]
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_h27gp")
