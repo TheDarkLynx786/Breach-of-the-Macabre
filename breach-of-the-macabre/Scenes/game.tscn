@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://3medmk0vtyi5"]
+[gd_scene load_steps=52 format=3 uid="uid://3medmk0vtyi5"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_8dc06"]
 [ext_resource type="Texture2D" uid="uid://bsf2fjcvlkcs" path="res://Assets/Warlock-Cast/pixil-frame-0.png" id="1_lcuid"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dfijug80dk35s" path="res://Assets/Background.png" id="11_3e6kh"]
 [ext_resource type="Script" path="res://Scripts/cam_tracking.gd" id="12_bvkgj"]
 [ext_resource type="Texture2D" uid="uid://0s1bsberhemu" path="res://Assets/Skeleton Archer/Archer-Idle/idle-1.png" id="13_hdtmk"]
+[ext_resource type="Script" path="res://Scripts/undead.gd" id="13_jml2j"]
 [ext_resource type="Texture2D" uid="uid://rlvs10d11ltr" path="res://Assets/Skeleton Archer/Archer-Idle/idle-2.png" id="14_1lkbi"]
 [ext_resource type="Texture2D" uid="uid://bckcxlwkn07yq" path="res://Assets/Skeleton Archer/Archer-Idle/idle-3.png" id="15_age7o"]
 [ext_resource type="Texture2D" uid="uid://bsoxlj08t0hrv" path="res://Assets/Skeleton Archer/Archer-Idle/idle-4.png" id="16_05ie2"]
@@ -323,12 +324,15 @@ shape = SubResource("RectangleShape2D_5scsg")
 
 [node name="Undead" type="CharacterBody2D" parent="."]
 position = Vector2(112.685, 0)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("13_jml2j")
 
 [node name="Sprite Animations" type="AnimatedSprite2D" parent="Undead"]
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_82s7t")
 animation = &"Scout-Move"
-frame_progress = 0.957434
+frame_progress = 0.798531
 
 [node name="Hitbox" type="CollisionShape2D" parent="Undead"]
 position = Vector2(-0.5, 4)
