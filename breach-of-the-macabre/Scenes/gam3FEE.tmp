@@ -253,7 +253,7 @@ size = Vector2(45, 100)
 
 [node name="Game" type="Node2D"]
 
-[node name="Warlock" type="CharacterBody2D" parent="."]
+[node name="Warlock" type="CharacterBody2D" parent="." groups=["player"]]
 scale = Vector2(3, 3)
 script = ExtResource("1_8dc06")
 
@@ -273,9 +273,9 @@ drag_top_margin = 1.0
 drag_right_margin = 1.0
 drag_bottom_margin = 1.0
 
-[node name="Hurtbox" type="Area2D" parent="Warlock" groups=["player"]]
+[node name="Hurtbox" type="Area2D" parent="Warlock"]
 collision_layer = 4
-collision_mask = 4
+collision_mask = 2
 
 [node name="Hurtbox Area" type="CollisionShape2D" parent="Warlock/Hurtbox"]
 position = Vector2(0, 1.5)
@@ -347,7 +347,7 @@ collision_mask = 7
 [node name="BoundaryX" type="CollisionShape2D" parent="World Boundary/Right"]
 shape = SubResource("RectangleShape2D_5scsg")
 
-[node name="Undead" type="CharacterBody2D" parent="."]
+[node name="Undead" type="CharacterBody2D" parent="." groups=["enemies"]]
 position = Vector2(112.685, 0)
 collision_layer = 2
 collision_mask = 2
@@ -363,9 +363,9 @@ frame_progress = 0.798531
 position = Vector2(-0.5, 4)
 shape = SubResource("RectangleShape2D_h27gp")
 
-[node name="Hurtbox" type="Area2D" parent="Undead" groups=["enemies"]]
+[node name="Hurtbox" type="Area2D" parent="Undead"]
 collision_layer = 4
-collision_mask = 4
+collision_mask = 8
 
 [node name="Hurtbox Area" type="CollisionShape2D" parent="Undead/Hurtbox"]
 position = Vector2(-0.184998, 4)
@@ -396,5 +396,3 @@ texture_under = ExtResource("46_353pd")
 texture_over = ExtResource("47_fqwfr")
 texture_progress = ExtResource("48_kt30n")
 texture_progress_offset = Vector2(-0.065, 0)
-
-[connection signal="area_entered" from="Warlock/Hurtbox" to="Warlock" method="_on_hurtbox_area_entered"]

@@ -10,6 +10,7 @@ var sprite: AnimatedSprite2D
 func _ready() -> void:
 	player = get_node("/root/Game/Warlock")
 	sprite = get_child(0)
+	add_to_group("enemies")
 
 func _physics_process(delta: float) -> void:
 	var direction := (player.global_position - global_position).normalized()

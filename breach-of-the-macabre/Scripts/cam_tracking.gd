@@ -12,8 +12,6 @@ const tracking_ySpan = 2309 #(background size.y - 2(cutoff length)) / 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	connect("body_entered", _on_body_entered)
-	connect("body_exited", _on_body_exited)
 	player = get_node("/root/Game/Warlock/")
 	cam = player.get_child(2)
 
@@ -30,13 +28,5 @@ func _process(delta: float) -> void:
 		cam.drag_vertical_enabled = true
 	elif (y_dist < tracking_ySpan):
 		cam.drag_vertical_enabled = false
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _on_body_entered(body):
-	if (body.name == "Warlock"):
-		isIn = true
-
-func _on_body_exited(body):
-	if (body.name == "Warlock"):
-		isIn = false
+	
+	
