@@ -19,7 +19,7 @@ func _ready() -> void:
 	hurtbox = get_child(3)
 	enemy = get_node("/root/Game/Undead/")
 	health_bar = get_node("/root/Game/UI/Control/").get_child(0)
-	health = health_bar.max_value
+	health = max_health
 	add_to_group("player")
 	
 	print(hurtbox)
@@ -27,20 +27,26 @@ func _ready() -> void:
 	print(enemy)
 
 func get_input():
-	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
-	velocity = input_direction * speed
-	
-	var x_dir = input_direction.x
-	var y_dir = input_direction.y
-	
-	# Direction-Facing
-	if(x_dir < 0):
-		sprite.flip_h = true
-	if(x_dir > 0):
-		sprite.flip_h = false
+	if(health > min_health):
+		var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
+		velocity = input_direction * speed
+		
+		var x_dir = input_direction.x
+		var y_dir = input_direction.y
+		
+		# Direction-Facing
+		if(x_dir < 0):
+			sprite.flip_h = true
+		if(x_dir > 0):
+			sprite.flip_h = false
+	else:
+		velocity = Vector2.ZERO
 	
 	# Animations
-	if(velocity.length() == 0):
+	if(health <= min_health):
+		sprite.play("death")
+		set_physics_process(false)
+	elif(velocity.length() == 0):
 		sprite.play("idle")
 	else:
 		sprite.play("move")
@@ -58,3 +64,4 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 		health -= health_step
 		health_bar.value = health
 		print(health)
+		
