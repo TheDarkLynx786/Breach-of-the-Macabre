@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="viewport"
 
+[global_group]
+
+player="The player"
+enemies="Anything attacking the player or the allies"
+allies="Non-player support characters like raised undead"
+
 [input]
 
 Up={

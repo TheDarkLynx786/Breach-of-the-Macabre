@@ -17,14 +17,12 @@ var health: int
 func _ready() -> void:
 	sprite = get_child(0)
 	hurtbox = get_child(3)
-	enemy = get_node("/root/Game/Undead/")
 	health_bar = get_node("/root/Game/UI/Control/").get_child(0)
 	health = max_health
 	add_to_group("player")
 	
 	print(hurtbox)
 	print(health_bar)
-	print(enemy)
 
 func get_input():
 	if(health > min_health):

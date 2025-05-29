@@ -1,0 +1,203 @@
+[gd_scene load_steps=37 format=3 uid="uid://calweev7cl5lh"]
+
+[ext_resource type="Script" path="res://Scripts/undead.gd" id="1_fc2cx"]
+[ext_resource type="Texture2D" uid="uid://0s1bsberhemu" path="res://Assets/Skeleton Archer/Archer-Idle/idle-1.png" id="2_15x37"]
+[ext_resource type="Texture2D" uid="uid://rlvs10d11ltr" path="res://Assets/Skeleton Archer/Archer-Idle/idle-2.png" id="3_4v1wf"]
+[ext_resource type="Texture2D" uid="uid://bckcxlwkn07yq" path="res://Assets/Skeleton Archer/Archer-Idle/idle-3.png" id="4_jylol"]
+[ext_resource type="Texture2D" uid="uid://bsoxlj08t0hrv" path="res://Assets/Skeleton Archer/Archer-Idle/idle-4.png" id="5_hbklt"]
+[ext_resource type="Texture2D" uid="uid://bjnu6hvjuui41" path="res://Assets/Skeleton Archer/Archer-Idle/idle-5.png" id="6_6xg1w"]
+[ext_resource type="Texture2D" uid="uid://blgpo6gqosbk" path="res://Assets/Skeleton Archer/Archer-Move/move-1.png" id="7_v5b0a"]
+[ext_resource type="Texture2D" uid="uid://dssautaojicit" path="res://Assets/Skeleton Archer/Archer-Move/move-2.png" id="8_580lt"]
+[ext_resource type="Texture2D" uid="uid://mkvrqcpcre2t" path="res://Assets/Skeleton Archer/Archer-Move/move-3.png" id="9_sy8nt"]
+[ext_resource type="Texture2D" uid="uid://duekoxia1x4cn" path="res://Assets/Skeleton Knight/Knight-Idle/idle-1.png" id="10_2fcf1"]
+[ext_resource type="Texture2D" uid="uid://xvx827fgys4" path="res://Assets/Skeleton Knight/Knight-Idle/idle-2.png" id="11_v2sc2"]
+[ext_resource type="Texture2D" uid="uid://y7vli6h6orhl" path="res://Assets/Skeleton Knight/Knight-Idle/idle-3.png" id="12_jccdg"]
+[ext_resource type="Texture2D" uid="uid://nfaidd205fuj" path="res://Assets/Skeleton Knight/Knight-Idle/idle-4.png" id="13_noax5"]
+[ext_resource type="Texture2D" uid="uid://combf3e6hw5ko" path="res://Assets/Skeleton Knight/Knight-Idle/idle-5.png" id="14_ai7uf"]
+[ext_resource type="Texture2D" uid="uid://c4tonkorpk0t4" path="res://Assets/Skeleton Knight/Knight-Move/move-1.png" id="15_rtd0h"]
+[ext_resource type="Texture2D" uid="uid://b5fdn1b66mpq1" path="res://Assets/Skeleton Knight/Knight-Move/move-2.png" id="16_c8x6q"]
+[ext_resource type="Texture2D" uid="uid://dv1uqrbvxbsex" path="res://Assets/Skeleton Knight/Knight-Move/move-3.png" id="17_6tdel"]
+[ext_resource type="Texture2D" uid="uid://b7ipyhmeqnfgd" path="res://Assets/Skeleton Mage/Mage-Idle/idle-1.png" id="18_jq7tm"]
+[ext_resource type="Texture2D" uid="uid://p03g2v0owfq0" path="res://Assets/Skeleton Mage/Mage-Idle/idle-2.png" id="19_tpdpf"]
+[ext_resource type="Texture2D" uid="uid://bio3yyfo6bute" path="res://Assets/Skeleton Mage/Mage-Idle/idle-3.png" id="20_4v7an"]
+[ext_resource type="Texture2D" uid="uid://ckg4l4yg6345o" path="res://Assets/Skeleton Mage/Mage-Idle/idle-4.png" id="21_flmb5"]
+[ext_resource type="Texture2D" uid="uid://dvupvh5c4o3nf" path="res://Assets/Skeleton Mage/Mage-Idle/idle-5.png" id="22_t2gx5"]
+[ext_resource type="Texture2D" uid="uid://cucf17odwcush" path="res://Assets/Skeleton Mage/Mage-Move/move-1.png" id="23_d8e3s"]
+[ext_resource type="Texture2D" uid="uid://dxfgg1t8gvhlo" path="res://Assets/Skeleton Mage/Mage-Move/move-2.png" id="24_uimlr"]
+[ext_resource type="Texture2D" uid="uid://ldgrfw3tmng1" path="res://Assets/Skeleton Mage/Mage-Move/move-3.png" id="25_u0v3f"]
+[ext_resource type="Texture2D" uid="uid://begukbtjvq2d8" path="res://Assets/Skeleton Scout/Scout-Idle/idle-2.png" id="26_vdh7s"]
+[ext_resource type="Texture2D" uid="uid://vsltpemqno73" path="res://Assets/Skeleton Scout/Scout-Idle/idle-1.png" id="27_0ntxe"]
+[ext_resource type="Texture2D" uid="uid://ct34s0es8d42f" path="res://Assets/Skeleton Scout/Scout-Idle/idle-3.png" id="28_hla5y"]
+[ext_resource type="Texture2D" uid="uid://btddm45td8066" path="res://Assets/Skeleton Scout/Scout-Idle/idle-4.png" id="29_kbdbv"]
+[ext_resource type="Texture2D" uid="uid://cb78k5bw5ihtd" path="res://Assets/Skeleton Scout/Scout-Idle/idle-5.png" id="30_0ul7l"]
+[ext_resource type="Texture2D" uid="uid://b1pqhh48sqx6x" path="res://Assets/Skeleton Scout/Scout-Move/move-1.png" id="31_j3bhp"]
+[ext_resource type="Texture2D" uid="uid://cr04sm8gcsmp4" path="res://Assets/Skeleton Scout/Scout-Move/move-2.png" id="32_njrva"]
+[ext_resource type="Texture2D" uid="uid://ct2fridva0vh3" path="res://Assets/Skeleton Scout/Scout-Move/move-3.png" id="33_dpkdr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0tr7g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_15x37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4v1wf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jylol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hbklt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6xg1w")
+}],
+"loop": true,
+"name": &"Archer-Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_v5b0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_580lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sy8nt")
+}],
+"loop": true,
+"name": &"Archer-Move",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_2fcf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_v2sc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jccdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_noax5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ai7uf")
+}],
+"loop": true,
+"name": &"Knight-Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_rtd0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_c8x6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6tdel")
+}],
+"loop": true,
+"name": &"Knight-Move",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_jq7tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_tpdpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4v7an")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_flmb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_t2gx5")
+}],
+"loop": true,
+"name": &"Mage-Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_d8e3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_uimlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_u0v3f")
+}],
+"loop": true,
+"name": &"Mage-Move",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_vdh7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_0ntxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_hla5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_kbdbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_0ul7l")
+}],
+"loop": true,
+"name": &"Scout-Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_j3bhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_njrva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_dpkdr")
+}],
+"loop": true,
+"name": &"Scout-Move",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nmhcx"]
+size = Vector2(45, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d338o"]
+size = Vector2(45, 87)
+
+[node name="Undead" type="CharacterBody2D"]
+position = Vector2(112.685, 0)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_fc2cx")
+
+[node name="Sprite Animations2" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_0tr7g")
+animation = &"Scout-Move"
+
+[node name="Hitbox2" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_nmhcx")
+
+[node name="Hurtbox2" type="Area2D" parent="." groups=["enemies"]]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Hurtbox Area" type="CollisionShape2D" parent="Hurtbox2"]
+position = Vector2(-0.184998, -2.5)
+shape = SubResource("RectangleShape2D_d338o")
