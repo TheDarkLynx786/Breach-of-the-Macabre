@@ -180,7 +180,6 @@ size = Vector2(45, 100)
 size = Vector2(45, 87)
 
 [node name="Undead" type="CharacterBody2D"]
-position = Vector2(112.685, 0)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_fc2cx")

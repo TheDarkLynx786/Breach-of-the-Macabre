@@ -234,6 +234,9 @@ texture_progress = ExtResource("48_kt30n")
 texture_progress_offset = Vector2(-0.065, 0)
 
 [node name="Undead Spawner" type="Node2D" parent="."]
+position = Vector2(500, 0)
 script = ExtResource("24_4ptgm")
+
+[node name="Timer" type="Timer" parent="Undead Spawner"]
 
 [connection signal="area_entered" from="Warlock/Hurtbox" to="Warlock" method="_on_hurtbox_area_entered"]
