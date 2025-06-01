@@ -3,6 +3,11 @@ extends CharacterBody2D
 
 const SPEED = 150.0
 
+var idle_anims = ["Scout-Idle","Mage-Idle","Archer-Idle","Knight-Idle"]
+var move_anims = ["Scout-Move","Mage-Move","Archer-Move","Knight-Move"]
+
+var idle
+var move
 
 var player: CharacterBody2D
 var sprite: AnimatedSprite2D
@@ -14,6 +19,14 @@ func _ready() -> void:
 	spawner = get_node("/root/Game/Undead Spawner/")
 	position = spawner.global_position
 	add_to_group("enemies")
+	
+	# Enemy Type (Animations)
+	
+	# Random Number Between 0 and 3
+	var index = randi() % 4
+	
+	idle = idle_anims[index]
+	move = move_anims[index]
 
 func _physics_process(delta: float) -> void:
 	var direction := (player.global_position - global_position).normalized()
@@ -28,9 +41,9 @@ func _physics_process(delta: float) -> void:
 	
 	# Animations
 	if(velocity.length() == 0):
-		sprite.play("Scout-Idle")
+		sprite.play(idle)
 	else:
-		sprite.play("Scout-Move")
+		sprite.play(move)
 	
 
 	move_and_slide()

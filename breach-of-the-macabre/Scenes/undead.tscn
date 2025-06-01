@@ -184,19 +184,19 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_fc2cx")
 
-[node name="Sprite Animations2" type="AnimatedSprite2D" parent="."]
+[node name="Sprite Animations" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_0tr7g")
 animation = &"Scout-Move"
 
-[node name="Hitbox2" type="CollisionShape2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 4)
 shape = SubResource("RectangleShape2D_nmhcx")
 
-[node name="Hurtbox2" type="Area2D" parent="." groups=["enemies"]]
+[node name="Hurtbox" type="Area2D" parent="." groups=["enemies"]]
 collision_layer = 4
 collision_mask = 4
 
-[node name="Hurtbox Area" type="CollisionShape2D" parent="Hurtbox2"]
+[node name="Hurtbox Area" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2(-0.184998, -2.5)
 shape = SubResource("RectangleShape2D_d338o")

@@ -34,6 +34,6 @@ func multi_spawn():
 		can_spawn = false
 		position = 100 * Vector2(cos(randf_range(0, 2*PI)), sin(randf_range(0, 2*PI)))
 		timer.start(time)
-		
+
 func timeout():
 	can_spawn = true
