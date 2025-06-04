@@ -8,6 +8,7 @@ var spawn_ct = 0
 
 const time = 3 
 
+signal enemy_type(index)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
@@ -25,6 +26,8 @@ func _process(delta: float) -> void:
 func spawn():
 	var enemy = enemy_scene.instantiate()
 	root.add_child(enemy)
+	var index = randi() % 4
+	change_enemy_type(index)
 	print(enemy.global_position)
 
 func multi_spawn():
@@ -37,3 +40,6 @@ func multi_spawn():
 
 func timeout():
 	can_spawn = true
+
+func change_enemy_type(index: int):
+	emit_signal("enemy_type", index)

@@ -9,6 +9,8 @@ var move_anims = ["Scout-Move","Mage-Move","Archer-Move","Knight-Move"]
 var idle
 var move
 
+var index = 0
+
 var player: CharacterBody2D
 var sprite: AnimatedSprite2D
 var spawner: Node2D
@@ -18,15 +20,21 @@ func _ready() -> void:
 	sprite = get_child(0)
 	spawner = get_node("/root/Game/Undead Spawner/")
 	position = spawner.global_position
+	spawner.enemy_type.connect(change_enemy)
 	add_to_group("enemies")
 	
 	# Enemy Type (Animations)
 	
 	# Random Number Between 0 and 3
-	var index = randi() % 4
 	
+	
+	
+
+func change_enemy(value: int):
+	index = value
 	idle = idle_anims[index]
 	move = move_anims[index]
+	spawner.enemy_type.disconnect(change_enemy)
 
 func _physics_process(delta: float) -> void:
 	var direction := (player.global_position - global_position).normalized()
